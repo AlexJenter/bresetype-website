@@ -1,0 +1,14 @@
+---
+const { fontFamily, fontSize } = Astro.props;
+---
+
+<div class="type-tester">
+  <slot />
+</div>
+
+<style define:vars={{ fontFamily, fontSize }}>
+  .type-tester {
+    font-size: var(--fontSize);
+    font-family: var(--fontFamily);
+  }
+</style>

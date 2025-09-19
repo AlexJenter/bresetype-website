@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+const fonts = (await getCollection("fonts"))
+  .sort((a, b) => b.data.navSort - a.data.navSort)
+  .reverse();
+---
+
+<nav>
+  <a href={"/"}>Alex Blattmann</a>
+  {
+    fonts.map((font: any) => (
+      <a href={`/fonts/${font.id}`}>{font.data.title}</a>
+    ))
+  }
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 1em;
+    padding-bottom: 1lh;
+  }
+</style>
