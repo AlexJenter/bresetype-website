@@ -17,17 +17,41 @@ const {
   <body>
     <header>
       <Nav />
-
       <h1>{title}</h1>
+      <main>
+        <slot />
+      </main>
     </header>
-    <main>
-      <slot />
-    </main>
   </body>
-</html>
 
-<style>
-  h1 {
-    padding-bottom: 1lh;
-  }
-</style>
+  <style>
+    h1 {
+      padding-bottom: 1lh;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.fontdue.com/fontdue.css" />
+  <script type="module">
+    import fontdue from "https://js.fontdue.com/fontdue.esm.js";
+
+    fontdue.initialize({
+      url: "https://crucible--test.fontdue.com",
+      config: {
+        typeTester: {
+          size: {
+            min: 6,
+            max: 480,
+            label: "Size",
+          },
+          selectable: true,
+          textInput: false,
+          groupEdit: false,
+          initialMode: "local",
+          shy: true,
+          buyButton: true,
+          selectButtonLabel: "Buy",
+          selectButtonStyle: "outlined",
+        },
+      },
+    });
+  </script>
+</html>

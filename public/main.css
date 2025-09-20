@@ -1,3 +1,13 @@
 html {
   font-family: monospace;
 }
+
+fontdue-type-tester {
+  --primary_text_color: white;
+  p:only-child {
+    font-size: attr(font-size);
+  }
+  p:only-child {
+    color: red;
+  }
+}
