@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Quince AI";
+  font-weight: normal;
+  src: url(/fonts/QuinceAI-Regular.woff2);
+}
+
 html {
   font-family: monospace;
 }
@@ -8,6 +14,12 @@ fontdue-type-tester {
     font-size: attr(font-size);
   }
   p:only-child {
-    color: red;
+    font-family: "Quince AI";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 172px;
+  }
+  p:not(:only-child) {
+    display: none;
   }
 }
