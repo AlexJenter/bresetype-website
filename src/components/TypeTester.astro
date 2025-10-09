@@ -1,14 +1,20 @@
 ---
-const { fontFamily, fontSize } = Astro.props;
+const html = await Astro.slots.render("default");
+const content = html.replace(/(<([^>]+)>)/gi, "");
+const { familyName, fontSize, styleName } = Astro.props;
 ---
 
-<div class="type-tester">
+<fontdue-type-tester
+  family-name={familyName}
+  style-name={styleName}
+  content={content}
+  font-size={fontSize}
+>
   <slot />
-</div>
+</fontdue-type-tester>
 
-<style define:vars={{ fontFamily, fontSize }}>
-  .type-tester {
-    font-size: var(--fontSize);
-    font-family: var(--fontFamily);
+<style>
+  fontdue-type-tester p {
+    font-size: {fontSize};
   }
 </style>
