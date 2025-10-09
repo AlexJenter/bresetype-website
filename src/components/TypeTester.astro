@@ -9,15 +9,7 @@ const { familyName, fontSize, styleName } = Astro.props;
   style-name={styleName}
   content={content}
   font-size={fontSize}
+  style=`--font-size:${fontSize}`
 >
   <slot />
 </fontdue-type-tester>
-
-<style>
-  fontdue-type-tester p {
-    font-family: "Quince AI Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 172px;
-  }
-</style>

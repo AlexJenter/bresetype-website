@@ -17,7 +17,7 @@ fontdue-type-tester {
     font-family: "Quince AI";
     font-style: normal;
     font-weight: 400;
-    font-size: 172px;
+    font-size: var(--font-size, 172px);
   }
   p:not(:only-child) {
     display: none;
