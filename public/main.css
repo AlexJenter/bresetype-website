@@ -8,6 +8,10 @@ html {
   font-family: monospace;
 }
 
+body {
+  margin-top: 1rem;
+}
+
 fontdue-type-tester {
   --primary_text_color: white;
   p:only-child {

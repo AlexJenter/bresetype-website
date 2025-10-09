@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+
+const { pathname } = Astro.url;
 const fonts = (await getCollection("fonts"))
   .sort((a, b) => b.data.navSort - a.data.navSort)
   .reverse();
@@ -8,9 +10,15 @@ const fonts = (await getCollection("fonts"))
 <nav>
   <a href={"/"}>Alex Blattmann</a>
   {
-    fonts.map((font: any) => (
-      <a href={`/fonts/${font.id}`}>{font.data.title}</a>
-    ))
+    fonts.map((font: any) => {
+      const className =
+        "nav-item " + (pathname.includes(font.id) ? "active" : "");
+      return (
+        <a href={`/fonts/${font.id}`} class={className}>
+          {font.data.title}
+        </a>
+      );
+    })
   }
 </nav>
 
@@ -19,5 +27,9 @@ const fonts = (await getCollection("fonts"))
     display: flex;
     gap: 1em;
     padding-bottom: 1lh;
+  }
+  .nav-item.active {
+    color: black;
+    background-color: white;
   }
 </style>
