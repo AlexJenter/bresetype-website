@@ -4,6 +4,9 @@ import Nav from "../components/Nav.astro";
 const {
   frontmatter: { title = "Brese", description },
 } = Astro.props;
+
+const currentYear = new Date().getFullYear();
+const copyright = `${currentYear} Alex Blattmann. All rights reserved. `;
 ---
 
 <html lang="en">
@@ -24,11 +27,13 @@ const {
     </main>
   </body>
 
-  <style>
-    h1 {
-      padding-bottom: 1lh;
-    }
-  </style>
+  <hr />
+  <p>
+    These type concepts are works-in-progress, single-weight designs and are not
+    currently available.
+  </p>
+  <p>{copyright}</p>
+
   <link rel="stylesheet" href="https://js.fontdue.com/fontdue.css" />
   <script type="module" is:inline>
     import fontdue from "https://js.fontdue.com/fontdue.esm.js";
