@@ -1,0 +1,685 @@
+@font-face {
+  font-family: "Ciunas";
+  src: url("fonts/Ciunas-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonoBlock";
+  src: url("fonts/MonoBlock-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quince AI";
+  src: url("fonts/QuinceAI-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BPMMono";
+  src: url("fonts/BPMMono_Web_Rg.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Flock";
+  src: url("fonts/Flock-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Netrin";
+  src: url("fonts/Netrin-UltracondensedBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Ciunas", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000000;
+  background-color: #f9f9f9;
+  margin: 0 auto; /* Center body content horizontally */
+  padding: 0 0 0 100px;
+  width: 60vw;
+  max-width: 1080px; /* Default for larger screens */
+  text-align: left;
+  margin-left: auto; /* Aligns to the left edge */
+  margin-right: auto; /* Centers the content horizontally without forcing centering */
+}
+
+header h1 {
+  font-family: "Ciunas", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.typeface-links header h2,
+main h2 {
+  font-family: "Ciunas", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: left;
+  color: #000000;
+  margin: 0; /* Removes extra space above and below h2 */
+  padding: 0; /* Removes inner padding */
+}
+
+strong {
+  font-family: "Ciunas", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Apply oldstyle figures */
+.onum {
+  font-feature-settings: "onum" 1;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #098ba8; /* Example hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    width: 85vw; /* Increase width for smaller screens */
+    padding: 12px; /* Adjust padding for mobile devices */
+    text-align: left; /* Maintain left alignment */
+    margin-left: auto; /* Aligns to the left edge */
+    margin-right: auto; /* Centers the content horizontally without forcing centering */
+  }
+
+  header h1 {
+    font-size: 20px; /* Reduce header size for smaller screens */
+    text-align: left;
+    padding-top: 60px;
+  }
+}
+
+.site-name {
+  background-color: #f9f9f9; /* or your desired color */
+  padding: 20px; /* optional: adds space around the text */
+}
+
+/* Typefaces Section */
+.typefaces-section {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.typefaces-section h2 {
+  font-family: "Ciunas", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-bottom: 0 auto;
+}
+
+.typefaces-section p {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 20px; /* Center body content horizontally */
+}
+
+/* Rounded Button for typefaces Page Link */
+.typefaces-button {
+  display: inline-block;
+  font-family: "MonoBlock", monospace;
+  font-size: 18px;
+  color: #000000;
+  border-color: #000000;
+  border-style: solid;
+  border-width: thin 1px;
+  text-decoration: none;
+  padding: 8px 8px 4px 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.typefaces-button:hover {
+  color: #076e88;
+}
+
+.section-divider {
+  border: none; /* Removes default browser styling */
+  border-top: 1px solid #000; /* Sets the thickness and color of the line */
+  margin: 20px 0; /* Adds spacing above and below the line */
+  width: 100%; /* Ensures the line spans the full width of its container */
+}
+
+/* Header Container for Layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Editable Container */
+.editable-container {
+  display: flex;
+  flex-direction: column;
+  resize: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.editable-box {
+  min-height: 140px;
+  line-height: 1;
+  overflow-y: auto;
+  width: 100%;
+  direction: ltr;
+  text-align: center;
+  font-family: "Ciunas", sans-serif; /* Default font */
+  font-size: 48px; /* Default font size */
+  resize: flex;
+  outline: none;
+  padding-top: 0.3em; /* vertical padding prevents clipping */
+  padding-bottom: 0.3em; /* vertical padding prevents clipping */
+  overflow-y: visible;
+}
+
+.editable-box-large {
+  font-size: 100px;
+}
+.editable-box-medium {
+  font-size: 48px;
+}
+.editable-box-small {
+  font-size: 16px;
+}
+
+.editable-box.two-columns {
+  column-count: 2;
+  column-gap: 20px;
+  text-align: left !important;
+}
+
+/* Add this to style.css or inside a <style> tag in the <head> */
+.two-columns {
+  column-count: 2;
+  column-gap: 20px;
+  word-break: break-word;
+}
+
+.editable-box-content-hint {
+  display: none;
+  position: relative;
+  top: 100%;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #c0c0c0;
+  font-family: "Ciunas", sans-serif;
+  pointer-events: none;
+}
+
+.editable-container:hover .editable-box-content-hint {
+  display: block;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+.font-buttons-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.font-button {
+  display: flex;
+  font-family: "MonoBlock", monospace;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  height: 36px;
+  color: inherit;
+  background-color: #ffffff;
+  border-color: #000000;
+  border-style: solid;
+  border-width: thin 1px;
+  text-decoration: none;
+  padding: 8px 8px 4px 8px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.font-button:hover {
+  color: #076e88;
+}
+
+[data-tooltip] {
+  position: relative;
+  pointer-events: text; /* or 'pointer' for buttons */
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9e6; /* translucent white E6*/
+  color: #3f3f3f;
+  font-family: "Ciunas", sans-serif;
+  font-size: 12px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+[data-tooltip]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100%);
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: #f9f9f9e6; /* arrow */
+  z-index: 1000;
+}
+
+/* Tooltip visibility control */
+[data-tooltip].hide-tooltip::after,
+[data-tooltip].hide-tooltip::before {
+  display: none !important;
+}
+
+.slider {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 60px;
+  height: 1px;
+  background: #c0c0c0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center; /* Vertically center them */
+  gap: 1.5rem; /* Optional: space between sliders */
+  flex-wrap: nowrap; /* Prevent wrapping on small screens */
+}
+
+.slider-controls label {
+  display: flex;
+  align-items: center;
+  font-family: "Ciunas", sans-serif;
+  font-size: 14px;
+  gap: 6px;
+  color: #c0c0c0;
+  transition: color 0.2s ease;
+}
+
+.slider-controls label:hover {
+  color: #000000;
+}
+
+.slider,
+.lineheight-slider-vertical {
+  flex-shrink: 1.5;
+}
+/* WebKit Browsers (Chrome, Safari) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+/* Firefox */
+.slider::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  border-radius: 0; /* This makes it square */
+  cursor: pointer;
+}
+
+/* Firefox track */
+.slider::-moz-range-track {
+  background: #c0c0c0;
+  height: 1px;
+  border: none;
+}
+
+.slider-spacer {
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 600px) {
+  .slider-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.lineheight-slider-vertical {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 32px; /* width becomes height visually */
+  height: 1px; /* makes it flat */
+  transform: rotate(-90deg); /* rotate it to act vertically */
+  transform-origin: center;
+  background: #c0c0c0;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.lineheight-slider-vertical::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+.lineheight-slider-vertical::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+.lineheight-slider-vertical::-moz-range-track {
+  background: #c0c0c0;
+  width: 1px;
+  border: none;
+}
+
+.tracking-slider {
+  appearance: none;
+  height: 1px;
+  background: #c0c0c0;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tracking-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Hover styling for all sliders === */
+
+/* Horizontal slider track on hover */
+.slider:hover {
+  background: #000000;
+}
+
+/* Vertical slider track on hover */
+.lineheight-slider-vertical:hover {
+  background: #000000;
+}
+
+/* Horizontal slider thumb on hover */
+.slider:hover::-webkit-slider-thumb {
+  background: #000000;
+}
+.slider:hover::-moz-range-thumb {
+  background: #000000;
+}
+
+/* Vertical slider thumb on hover */
+.lineheight-slider-vertical:hover::-webkit-slider-thumb {
+  background: #000000;
+}
+.lineheight-slider-vertical:hover::-moz-range-thumb {
+  background: #000000;
+}
+
+.tracking-slider:hover {
+  background: #000000;
+}
+
+.tracking-slider:hover::-webkit-slider-thumb {
+  background: #000000;
+}
+
+.floating-header {
+  position: fixed;
+  top: 11px;
+  left: 16px;
+  right: 16px;
+  font-size: 20px;
+  z-index: 1000;
+  color: #000;
+  background-color: #f9f9f9; /* or your color */
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-family: "Ciunas", sans-serif;
+}
+
+/* Hidden state */
+.floating-header.hide {
+  transform: translateY(-100%);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: relative; /* enables proper dropdown anchoring */
+  vertical-align: middle;
+}
+
+.hamburger-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Wrap to prevent dropdown from covering icon */
+.menu-container {
+  position: relative;
+}
+
+/* Hidden by default */
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  font-size: 16px;
+  flex-direction: column;
+  font-family: "Ciunas", sans-serif;
+  z-index: 999;
+}
+
+.hamburger-menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+.hamburger-menu a:hover {
+  color: #076e88;
+}
+
+/* Toggle menu display with class */
+.hamburger-menu.show {
+  display: flex;
+}
+
+/* === DARK MODE STYLES === */
+body.dark-mode {
+  background-color: #060606;
+  color: #ffffff;
+}
+
+/* Links on about page and others */
+body.dark-mode a {
+  color: inherit;
+}
+body.dark-mode a:hover {
+  color: #089ec4;
+}
+
+body.dark-mode .site-name {
+  background-color: #060606;
+}
+
+body.dark-mode .typeface-links h2,
+body.dark-mode main h2 {
+  color: #ffffff;
+}
+
+/* Typeface buttons and font buttons */
+body.dark-mode .typefaces-button,
+body.dark-mode .font-button {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+body.dark-mode .typefaces-button:hover,
+body.dark-mode .font-button:hover {
+  color: #089ec4;
+}
+
+body.dark-mode .section-divider {
+  border-top: 1px solid #ffffff;
+}
+
+/* Floating header */
+body.dark-mode .floating-header {
+  background-color: #060606;
+  color: #ffffff;
+}
+
+body.dark-mode footer p,
+body.dark-mode .onum {
+  color: #ffffff;
+}
+
+/* Hamburger dropdown */
+body.dark-mode .hamburger-menu {
+  background-color: #060606;
+}
+body.dark-mode .hamburger-menu a {
+  color: #ffffff;
+}
+body.dark-mode .hamburger-menu a:hover {
+  color: #089ec4;
+}
+
+/* Sliders and thumbs */
+body.dark-mode .slider,
+body.dark-mode .lineheight-slider-vertical,
+body.dark-mode .tracking-slider {
+  background: #3f3f3f;
+  transition: color 0.2s ease;
+}
+body.dark-mode .slider-controls label {
+  color: #3f3f3f;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .slider-controls label:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .slider:hover,
+body.dark-mode .lineheight-slider-vertical:hover,
+body.dark-mode .tracking-slider:hover {
+  background: #ffffff;
+}
+body.dark-mode .slider:hover::-webkit-slider-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
+body.dark-mode .tracking-slider:hover::-webkit-slider-thumb,
+body.dark-mode .slider:hover::-moz-range-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
+body.dark-mode .tracking-slider:hover::-moz-range-thumb {
+  background: #ffffff;
+}
+
+body.dark-mode .slider::-webkit-slider-thumb,
+body.dark-mode .lineheight-slider-vertical::-webkit-slider-thumb,
+body.dark-mode .tracking-slider::-webkit-slider-thumb {
+  background: #3f3f3f;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .slider:hover::-webkit-slider-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
+body.dark-mode .tracking-slider:hover::-webkit-slider-thumb {
+  background: #ffffff;
+}
+
+body.dark-mode .slider::-moz-range-thumb,
+body.dark-mode .lineheight-slider-vertical::-moz-range-thumb,
+body.dark-mode .tracking-slider::-moz-range-thumb {
+  background: #3f3f3f;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .slider:hover::-moz-range-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
+body.dark-mode .tracking-slider:hover::-moz-range-thumb {
+  background: #ffffff;
+}
+
+/* Firefox track */
+body.dark-mode .slider::-moz-range-track {
+  background: #3f3f3f;
+}
+
+body.dark-mode .slider:hover::-moz-range-track {
+  background: #ffffff;
+}
+
+.reset-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+body.dark-mode .reset-icon {
+  content: url("assets/TextReset_Icon_On.svg");
+}

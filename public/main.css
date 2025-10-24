@@ -1,19 +1,7 @@
-@font-face {
-  font-family: "Quince AI";
-  font-weight: normal;
-  src: url(/fonts/QuinceAI-Regular.woff2);
-}
-
-html {
-  font-family: monospace;
-}
-
-body {
-  margin-top: 1rem;
-}
+@import url(./brese.css);
 
 fontdue-type-tester {
-  --primary_text_color: white;
+  /* --primary_text_color: white; */
   p:only-child {
     font-size: attr(font-size);
   }
