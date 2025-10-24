@@ -8,13 +8,13 @@ const fonts = (await getCollection("fonts"))
 ---
 
 <nav>
-  <a href={"/"}>Alex Blattmann</a>
+  <a href={"/bresetype-website"}>Alex Blattmann</a>
   {
     fonts.map((font: any) => {
       const className =
         "nav-item " + (pathname.includes(font.id) ? "active" : "");
       return (
-        <a href={`/fonts/${font.id}`} class={className}>
+        <a href={`/bresetype-website/fonts/${font.id}`} class={className}>
           {font.data.title}
         </a>
       );
@@ -26,6 +26,8 @@ const fonts = (await getCollection("fonts"))
   nav {
     display: flex;
     gap: 1em;
+    padding-top: 2lh;
+    padding-top: 2rlh;
     padding-bottom: 1lh;
   }
   .nav-item.active {
