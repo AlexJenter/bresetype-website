@@ -10,15 +10,14 @@ const fonts = (await getCollection("fonts"))
 <nav>
   <a href={"/bresetype-website"}>Alex Blattmann</a>
   {
-    fonts.map((font: any) => {
-      const className =
-        "nav-item " + (pathname.includes(font.id) ? "active" : "");
-      return (
-        <a href={`/bresetype-website/fonts/${font.id}`} class={className}>
-          {font.data.title}
-        </a>
-      );
-    })
+    fonts.map((font: any) => (
+      <a
+        href={`/bresetype-website/fonts/${font.id}`}
+        class:list={["nav-item", { active: pathname.includes(font.id) }]}
+      >
+        {font.data.title}
+      </a>
+    ))
   }
 </nav>
 
@@ -31,7 +30,6 @@ const fonts = (await getCollection("fonts"))
     padding-bottom: 1lh;
   }
   .nav-item.active {
-    color: black;
-    background-color: white;
+    text-decoration: underline;
   }
 </style>
