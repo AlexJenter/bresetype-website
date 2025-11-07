@@ -1,10 +1,4 @@
-# Astro Starter Kit: Minimal
-
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# Bresetype WIP
 
 ## 🚀 Project Structure
 
@@ -15,11 +9,15 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── public/
 ├── src/
 │   └── pages/
+│       ├── fonts/
+│       │   ├── quince.mdx
+│       │   ├── ciunas.mdx
+│       │   └── ...
 │       └── index.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro looks for `.astro` or `.md`/`.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
