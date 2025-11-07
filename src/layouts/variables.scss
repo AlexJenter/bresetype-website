@@ -1,0 +1,67 @@
+:root {
+  --color-text: #000000;
+  --color-bg: #f9f9f9;
+  --color-bg-transparent: #f9f9f9e6;
+  --color-muted: #c0c0c0;
+  --color-muted-strong: #3f3f3f;
+
+  --color-border: #000000;
+  --color-divider: #000000;
+
+  --color-link-hover: #098ba8;
+  --color-accent-1: #076e88;
+  --color-accent-2: #089ec4;
+
+  --color-button-text: #000000;
+  --color-button-bg: #ffffff;
+  --color-button-border: #000000;
+  --color-button-hover: var(--color-accent-1);
+
+  --color-tooltip-bg: var(--color-bg-transparent);
+  --color-tooltip-text: var(--color-muted-strong);
+  --color-tooltip-arrow: var(--color-bg-transparent);
+
+  --color-slider-track: var(--color-muted);
+  --color-slider-thumb: var(--color-muted);
+  --color-slider-hover-track: var(--color-text);
+  --color-slider-hover-thumb: var(--color-text);
+
+  --color-header-bg: var(--color-bg);
+  --color-header-text: var(--color-text);
+
+  --icon-reset: url("assets/TextReset_Icon_Off.svg");
+}
+
+body.dark-mode {
+  --color-text: #ffffff;
+  --color-bg: #060606;
+  --color-bg-transparent: rgba(6, 6, 6, 0.9);
+  --color-muted: #3f3f3f;
+  --color-muted-strong: #ffffff;
+
+  --color-border: #ffffff;
+  --color-divider: #ffffff;
+
+  --color-link-hover: #089ec4;
+  --color-accent-1: #089ec4;
+  --color-accent-2: #089ec4;
+
+  --color-button-text: #ffffff;
+  --color-button-bg: #000000;
+  --color-button-border: #ffffff;
+  --color-button-hover: var(--color-accent-1);
+
+  --color-tooltip-bg: var(--color-bg-transparent);
+  --color-tooltip-text: #ffffff;
+  --color-tooltip-arrow: var(--color-bg-transparent);
+
+  --color-slider-track: var(--color-muted);
+  --color-slider-thumb: var(--color-muted);
+  --color-slider-hover-track: var(--color-text);
+  --color-slider-hover-thumb: var(--color-text);
+
+  --color-header-bg: var(--color-bg);
+  --color-header-text: var(--color-text);
+
+  --icon-reset: url("assets/TextReset_Icon_On.svg");
+}

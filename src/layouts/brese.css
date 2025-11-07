@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Ciunas";
   src: url("fonts/Ciunas-Medium.woff2") format("woff2");
   font-weight: normal;
@@ -38,7 +38,7 @@
   src: url("fonts/Netrin-UltracondensedBold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
   font-family: "Ciunas", Arial, Helvetica, sans-serif;

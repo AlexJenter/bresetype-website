@@ -1,0 +1,59 @@
+<label for="color-scheme-toggle">
+  <img
+    src="/public/icons/DarkMode_Icon_Off.svg"
+    alt="Toggle Dark mode"
+    width="20"
+    height="20"
+  />
+  <input type="checkbox" name="color-scheme-toggle" id="color-scheme-toggle" />
+</label>
+
+<script>
+  const darkToggle = document.getElementById("color-scheme-toggle");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const savedTheme = localStorage.getItem("theme");
+
+  function toggleApplyTheme(theme: any) {
+    const isDark = theme === "dark";
+    document.body.classList.toggle("dark-mode", isDark);
+
+    if (!darkToggle || !("src" in darkToggle)) return;
+
+    darkToggle.src = isDark
+      ? "assets/DarkMode_Icon_On.svg"
+      : "assets/DarkMode_Icon_Off.svg";
+  }
+
+  const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+  toggleApplyTheme(initialTheme);
+
+  if (darkToggle) {
+    darkToggle.addEventListener("click", () => {
+      const newTheme = document.body.classList.contains("dark-mode")
+        ? "light"
+        : "dark";
+      toggleApplyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+</script>
+
+<style lang="scss">
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input {
+    display: none;
+  }
+
+  img {
+    margin-bottom: 0;
+
+    body.dark-mode & {
+      filter: invert(1);
+    }
+  }
+</style>

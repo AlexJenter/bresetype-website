@@ -1,4 +1,9 @@
 ---
+import "./brese.css";
+import "./variables.scss";
+import "./main.scss";
+
+import ColorSchemeToggle from "../components/ColorSchemeToggle.astro";
 import Nav from "../components/Nav.astro";
 
 const {
@@ -13,15 +18,15 @@ const copyright = `${currentYear} Alex Blattmann. All rights reserved. `;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <link rel="stylesheet" href="/bresetype-website/main.css" />
     <title>{title}</title>
   </head>
   <body>
     <header>
       <Nav />
-      <h1>{title}</h1>
+      <ColorSchemeToggle />
     </header>
     <main>
+      <h1>{title}</h1>
       <slot />
     </main>
   </body>

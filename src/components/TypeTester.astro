@@ -14,7 +14,7 @@ const { familyName, fontSize, styleName, columns = 1 } = Astro.props;
   <slot />
 </fontdue-type-tester>
 
-<style define:vars={{ columns }} is:global>
+<style define:vars={{ columns }} is:global lang="scss">
   fontdue-type-tester p,
   fontdue-type-tester span[data-text] {
     display: inline-block;

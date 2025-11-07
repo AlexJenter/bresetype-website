@@ -1,17 +1,28 @@
-@import url(./main.css);
-@import url(./brese.css);
+body {
+  --primary_text_color: var(--color-text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2lh;
+  padding-top: 2rlh;
+  padding-bottom: 1lh;
+}
 
 fontdue-type-tester {
-  /* --primary_text_color: white; */
   p:only-child {
     font-size: attr(font-size);
   }
+
   p:only-child {
     font-family: "Quince AI";
     font-style: normal;
     font-weight: 400;
     font-size: var(--font-size, 172px);
   }
+
   p:not(:only-child) {
     display: none;
   }
