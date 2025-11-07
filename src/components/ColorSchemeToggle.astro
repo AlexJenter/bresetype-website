@@ -1,6 +1,10 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <label for="color-scheme-toggle">
   <img
-    src="/public/icons/DarkMode_Icon_Off.svg"
+    src={`${base}/icons/DarkMode_Icon_Off.svg`}
     alt="Toggle Dark mode"
     width="20"
     height="20"
@@ -8,28 +12,23 @@
   <input type="checkbox" name="color-scheme-toggle" id="color-scheme-toggle" />
 </label>
 
-<script>
+<script is:inline>
   const darkToggle = document.getElementById("color-scheme-toggle");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const savedTheme = localStorage.getItem("theme");
 
-  function toggleApplyTheme(theme: any) {
+  function toggleApplyTheme(theme) {
     const isDark = theme === "dark";
-    document.body.classList.toggle("dark-mode", isDark);
-
-    if (!darkToggle || !("src" in darkToggle)) return;
-
-    darkToggle.src = isDark
-      ? "assets/DarkMode_Icon_On.svg"
-      : "assets/DarkMode_Icon_Off.svg";
+    document.documentElement.classList.toggle("dark-mode", isDark);
+    darkToggle.checked = isDark;
   }
 
   const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
   toggleApplyTheme(initialTheme);
 
   if (darkToggle) {
-    darkToggle.addEventListener("click", () => {
-      const newTheme = document.body.classList.contains("dark-mode")
+    darkToggle.addEventListener("change", () => {
+      const newTheme = document.documentElement.classList.contains("dark-mode")
         ? "light"
         : "dark";
       toggleApplyTheme(newTheme);
@@ -52,7 +51,7 @@
   img {
     margin-bottom: 0;
 
-    body.dark-mode & {
+    :root.dark-mode & {
       filter: invert(1);
     }
   }

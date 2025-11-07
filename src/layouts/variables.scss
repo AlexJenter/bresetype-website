@@ -32,7 +32,7 @@
   --icon-reset: url("assets/TextReset_Icon_Off.svg");
 }
 
-body.dark-mode {
+html.dark-mode {
   --color-text: #ffffff;
   --color-bg: #060606;
   --color-bg-transparent: rgba(6, 6, 6, 0.9);

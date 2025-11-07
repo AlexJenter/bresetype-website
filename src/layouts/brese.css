@@ -548,129 +548,129 @@ a:hover {
 }
 
 /* === DARK MODE STYLES === */
-body.dark-mode {
+html.dark-mode {
   background-color: #060606;
   color: #ffffff;
 }
 
 /* Links on about page and others */
-body.dark-mode a {
+html.dark-mode a {
   color: inherit;
 }
-body.dark-mode a:hover {
+html.dark-mode a:hover {
   color: #089ec4;
 }
 
-body.dark-mode .site-name {
+html.dark-mode .site-name {
   background-color: #060606;
 }
 
-body.dark-mode .typeface-links h2,
-body.dark-mode main h2 {
+html.dark-mode .typeface-links h2,
+html.dark-mode main h2 {
   color: #ffffff;
 }
 
 /* Typeface buttons and font buttons */
-body.dark-mode .typefaces-button,
-body.dark-mode .font-button {
+html.dark-mode .typefaces-button,
+html.dark-mode .font-button {
   color: #ffffff;
   background-color: #000000;
   border-color: #ffffff;
 }
 
-body.dark-mode .typefaces-button:hover,
-body.dark-mode .font-button:hover {
+html.dark-mode .typefaces-button:hover,
+html.dark-mode .font-button:hover {
   color: #089ec4;
 }
 
-body.dark-mode .section-divider {
+html.dark-mode .section-divider {
   border-top: 1px solid #ffffff;
 }
 
 /* Floating header */
-body.dark-mode .floating-header {
+html.dark-mode .floating-header {
   background-color: #060606;
   color: #ffffff;
 }
 
-body.dark-mode footer p,
-body.dark-mode .onum {
+html.dark-mode footer p,
+html.dark-mode .onum {
   color: #ffffff;
 }
 
 /* Hamburger dropdown */
-body.dark-mode .hamburger-menu {
+html.dark-mode .hamburger-menu {
   background-color: #060606;
 }
-body.dark-mode .hamburger-menu a {
+html.dark-mode .hamburger-menu a {
   color: #ffffff;
 }
-body.dark-mode .hamburger-menu a:hover {
+html.dark-mode .hamburger-menu a:hover {
   color: #089ec4;
 }
 
 /* Sliders and thumbs */
-body.dark-mode .slider,
-body.dark-mode .lineheight-slider-vertical,
-body.dark-mode .tracking-slider {
+html.dark-mode .slider,
+html.dark-mode .lineheight-slider-vertical,
+html.dark-mode .tracking-slider {
   background: #3f3f3f;
   transition: color 0.2s ease;
 }
-body.dark-mode .slider-controls label {
+html.dark-mode .slider-controls label {
   color: #3f3f3f;
   transition: color 0.2s ease;
 }
 
-body.dark-mode .slider-controls label:hover {
+html.dark-mode .slider-controls label:hover {
   color: #ffffff;
 }
 
-body.dark-mode .slider:hover,
-body.dark-mode .lineheight-slider-vertical:hover,
-body.dark-mode .tracking-slider:hover {
+html.dark-mode .slider:hover,
+html.dark-mode .lineheight-slider-vertical:hover,
+html.dark-mode .tracking-slider:hover {
   background: #ffffff;
 }
-body.dark-mode .slider:hover::-webkit-slider-thumb,
-body.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
-body.dark-mode .tracking-slider:hover::-webkit-slider-thumb,
-body.dark-mode .slider:hover::-moz-range-thumb,
-body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
-body.dark-mode .tracking-slider:hover::-moz-range-thumb {
+html.dark-mode .slider:hover::-webkit-slider-thumb,
+html.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
+html.dark-mode .tracking-slider:hover::-webkit-slider-thumb,
+html.dark-mode .slider:hover::-moz-range-thumb,
+html.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
+html.dark-mode .tracking-slider:hover::-moz-range-thumb {
   background: #ffffff;
 }
 
-body.dark-mode .slider::-webkit-slider-thumb,
-body.dark-mode .lineheight-slider-vertical::-webkit-slider-thumb,
-body.dark-mode .tracking-slider::-webkit-slider-thumb {
+html.dark-mode .slider::-webkit-slider-thumb,
+html.dark-mode .lineheight-slider-vertical::-webkit-slider-thumb,
+html.dark-mode .tracking-slider::-webkit-slider-thumb {
   background: #3f3f3f;
   transition: color 0.2s ease;
 }
 
-body.dark-mode .slider:hover::-webkit-slider-thumb,
-body.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
-body.dark-mode .tracking-slider:hover::-webkit-slider-thumb {
+html.dark-mode .slider:hover::-webkit-slider-thumb,
+html.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
+html.dark-mode .tracking-slider:hover::-webkit-slider-thumb {
   background: #ffffff;
 }
 
-body.dark-mode .slider::-moz-range-thumb,
-body.dark-mode .lineheight-slider-vertical::-moz-range-thumb,
-body.dark-mode .tracking-slider::-moz-range-thumb {
+html.dark-mode .slider::-moz-range-thumb,
+html.dark-mode .lineheight-slider-vertical::-moz-range-thumb,
+html.dark-mode .tracking-slider::-moz-range-thumb {
   background: #3f3f3f;
   transition: color 0.2s ease;
 }
 
-body.dark-mode .slider:hover::-moz-range-thumb,
-body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
-body.dark-mode .tracking-slider:hover::-moz-range-thumb {
+html.dark-mode .slider:hover::-moz-range-thumb,
+html.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
+html.dark-mode .tracking-slider:hover::-moz-range-thumb {
   background: #ffffff;
 }
 
 /* Firefox track */
-body.dark-mode .slider::-moz-range-track {
+html.dark-mode .slider::-moz-range-track {
   background: #3f3f3f;
 }
 
-body.dark-mode .slider:hover::-moz-range-track {
+html.dark-mode .slider:hover::-moz-range-track {
   background: #ffffff;
 }
 
@@ -680,6 +680,6 @@ body.dark-mode .slider:hover::-moz-range-track {
   cursor: pointer;
 }
 
-body.dark-mode .reset-icon {
+html.dark-mode .reset-icon {
   content: url("assets/TextReset_Icon_On.svg");
 }
