@@ -7,7 +7,7 @@ import ColorSchemeToggle from "../components/ColorSchemeToggle.astro";
 import Nav from "../components/Nav.astro";
 
 const {
-  frontmatter: { title = "Brese", description },
+  frontmatter: { title = "Brese", description, webFont },
 } = Astro.props;
 
 const currentYear = new Date().getFullYear();
@@ -18,49 +18,50 @@ const copyright = `${currentYear} Alex Blattmann. All rights reserved. `;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
+    <link href={webFont} rel="stylesheet" fetchpriority="high" />
+
     <title>{title}</title>
   </head>
-  <body>
-    <header>
-      <Nav />
-      <ColorSchemeToggle />
-    </header>
-    <main>
-      <h1>{title}</h1>
-      <slot />
-    </main>
-  </body>
-
-  <hr />
-  <p>
-    These type concepts are works-in-progress, single-weight designs and are not
-    currently available.
-  </p>
-  <p>{copyright}</p>
-
-  <link rel="stylesheet" href="https://js.fontdue.com/fontdue.css" />
-  <script type="module" is:inline>
-    import fontdue from "https://js.fontdue.com/fontdue.esm.js";
-
-    fontdue.initialize({
-      url: "https://crucible--test.fontdue.com",
-      config: {
-        typeTester: {
-          size: {
-            min: 6,
-            max: 480,
-            label: "Size",
-          },
-          selectable: true,
-          textInput: false,
-          groupEdit: false,
-          initialMode: "local",
-          shy: true,
-          buyButton: true,
-          selectButtonLabel: "Buy",
-          selectButtonStyle: "outlined",
-        },
-      },
-    });
-  </script>
 </html>
+<body>
+  <header>
+    <Nav />
+    <ColorSchemeToggle />
+  </header>
+  <main>
+    <slot />
+  </main>
+</body>
+
+<hr />
+<p>
+  These type concepts are works-in-progress, single-weight designs and are not
+  currently available.
+</p>
+<p>{copyright}</p>
+
+<link rel="stylesheet" href="https://js.fontdue.com/fontdue.css" />
+<script type="module" is:inline>
+  import fontdue from "https://js.fontdue.com/fontdue.esm.js";
+
+  fontdue.initialize({
+    url: "https://crucible--test.fontdue.com",
+    config: {
+      typeTester: {
+        size: {
+          min: 6,
+          max: 480,
+          label: "Size",
+        },
+        selectable: true,
+        textInput: false,
+        groupEdit: false,
+        initialMode: "local",
+        shy: true,
+        buyButton: true,
+        selectButtonLabel: "Buy",
+        selectButtonStyle: "outlined",
+      },
+    },
+  });
+</script>

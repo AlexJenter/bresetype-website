@@ -1,16 +1,18 @@
 /* @font-face {
+  font-family: "MonoBlock";
+  src: url("https://fonts.fontdue.com/crucible--test/fonts/d765805c3725af61e8adb3a2162e1ff686b67fac.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @font-face {
   font-family: "Ciunas";
   src: url("fonts/Ciunas-Medium.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "MonoBlock";
-  src: url("fonts/MonoBlock-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "Quince AI";
@@ -47,9 +49,7 @@ body {
   color: #000000;
   background-color: #f9f9f9;
   margin: 0 auto; /* Center body content horizontally */
-  padding: 0 0 0 100px;
-  width: 60vw;
-  max-width: 1080px; /* Default for larger screens */
+  padding: 1rem;
   text-align: left;
   margin-left: auto; /* Aligns to the left edge */
   margin-right: auto; /* Centers the content horizontally without forcing centering */

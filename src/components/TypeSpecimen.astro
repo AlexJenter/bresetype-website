@@ -1,0 +1,36 @@
+---
+interface Props {
+  fontFamily: string;
+  fontSize?: number;
+  color?: string;
+  alignment: "left" | "center" | "right";
+}
+
+const {
+  fontFamily,
+  fontSize = 16,
+  color = "CanvasText",
+  alignment = "left",
+} = Astro.props;
+---
+
+<div
+  class="specimen"
+  style={`font-family:${fontFamily};font-size:${fontSize}px;--c:${color};--a:${alignment}`}
+  contenteditable=""
+>
+  <slot />
+</div>
+
+<style lang="scss">
+  .specimen {
+    outline: none;
+    color: var(--c);
+    text-align: var(--a, left);
+    word-break: break-word;
+  }
+  :global(p::selection) {
+    color: white;
+    background-color: var(--c);
+  }
+</style>
