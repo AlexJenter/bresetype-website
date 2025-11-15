@@ -1,7 +1,7 @@
 ---
 interface Props {
   fontFamily: string;
-  fontSize?: number;
+  fontSize?: string;
   color?: string;
   alignment: "left" | "center" | "right";
 }
@@ -16,7 +16,7 @@ const {
 
 <div
   class="specimen"
-  style={`font-family:${fontFamily};font-size:${fontSize}px;--c:${color};--a:${alignment}`}
+  style={`font-family:${fontFamily};font-size:${fontSize};--c:${color};--a:${alignment}`}
   contenteditable=""
 >
   <slot />
@@ -28,6 +28,9 @@ const {
     color: var(--c);
     text-align: var(--a, left);
     word-break: break-word;
+    :global(> *) {
+      margin: 0;
+    }
   }
   :global(p::selection) {
     color: white;
