@@ -1,7 +1,14 @@
 ---
 const html = await Astro.slots.render("default");
 const content = html.replace(/(<([^>]+)>)/gi, "");
-const { familyName, fontSize, styleName, columns = 1 } = Astro.props;
+const {
+  familyName,
+  fontSize,
+  styleName,
+  columns = 1,
+  axes,
+  variableSettings,
+} = Astro.props;
 ---
 
 <fontdue-type-tester
@@ -10,6 +17,8 @@ const { familyName, fontSize, styleName, columns = 1 } = Astro.props;
   content={content}
   font-size={fontSize}
   style=`--font-size:${fontSize}`
+  axes={axes}
+  variable-settings={variableSettings}
 >
 </fontdue-type-tester>
 
