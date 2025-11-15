@@ -3,6 +3,7 @@ interface Props {
   fontFamily: string;
   fontSize?: string;
   color?: string;
+  fontFeatureSettings?: string;
   fontVariationSettings?: string;
   columns?: number;
   alignment: "left" | "center" | "right";
@@ -14,6 +15,7 @@ const {
   color = "var(--color-text)",
   columns = 1,
   alignment = "left",
+  fontFeatureSettings,
   fontVariationSettings,
 } = Astro.props;
 ---
@@ -30,6 +32,7 @@ const {
     fontSize,
     alignment,
     color,
+    fontFeatureSettings,
     fontVariationSettings,
   }}
 >
@@ -45,6 +48,7 @@ const {
     text-align: var(--alignment);
     columns: var(--columns);
     word-break: break-word;
+    font-feature-settings: var(--fontFeatureSettings);
     font-variation-settings: var(--fontVariationSettings);
     &::selection {
       color: Canvas;
