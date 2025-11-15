@@ -3,37 +3,42 @@ interface Props {
   fontFamily: string;
   fontSize?: string;
   color?: string;
+  columns?: number;
   alignment: "left" | "center" | "right";
 }
 
 const {
   fontFamily,
   fontSize = 16,
-  color = "CanvasText",
+  color = "var(--color-text)",
+  columns = 1,
   alignment = "left",
 } = Astro.props;
 ---
 
-<div
-  class="specimen"
-  style={`font-family:${fontFamily};font-size:${fontSize};--c:${color};--a:${alignment}`}
-  contenteditable=""
->
+<div class="specimen" contenteditable="">
   <slot />
 </div>
 
-<style lang="scss">
+<style
+  lang="scss"
+  define:vars={{ columns, fontFamily, fontSize, alignment, color }}
+>
   .specimen {
     outline: none;
-    color: var(--c);
-    text-align: var(--a, left);
-    word-break: break-word;
-    :global(> *) {
-      margin: 0;
-    }
   }
-  :global(p::selection) {
-    color: white;
-    background-color: var(--c);
+
+  :global(p) {
+    color: var(--color);
+    margin: 0;
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    text-align: var(--alignment);
+    columns: var(--columns);
+    word-break: break-word;
+    &::selection {
+      color: Canvas;
+      background-color: var(--color);
+    }
   }
 </style>
